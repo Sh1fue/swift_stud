@@ -1,56 +1,57 @@
 import UIKit
-
-//6.1
-//let customer = ("Иван Иванов", 100, "2")
-//let firstaction = ("ДР", 200, "1")
-//let secondaction = ("День города", 500, "2")
-//
-//
-//print("Акция", firstaction.0 ,", за нее вы получите бонусы в количестве", firstaction.1)
-//print("Акция", secondaction.0 ,", за нее вы получите бонусы в количестве", secondaction.1)
-//print("Ваше изначальное количесво бонусов", customer.1)
-//if customer.2 == firstaction.2{
-//    print("Количетво бонусов =", customer.1 + firstaction.1)
-//}else{
-//    print("Вы не учавствуете в акции", firstaction.0)
-//}
-//if customer.2 == secondaction.2{
-//    print("Количетво бонусов =", customer.1 + secondaction.1)
-//}else{
-//    print("Вы не учавствуете в акции", secondaction.0)
-//}
-//6.2
-//func convertBonusToRubles(bonusPoints: Int) -> Double {
-//    let bonusToRuble: Double = 0.5
-//    let rubles = Double(bonusPoints) * bonusToRuble
-//    return rubles
-//}
-//
-//let bonusPoints = 600
-//let discountInRubles = convertBonusToRubles(bonusPoints: bonusPoints)
-//print("Сумма скидки в рублях: \(discountInRubles) руб.")
-
-//func calculateSticker (){
-//    let bonus = 600
-//    let firstLevel = 10
-//    let secondLevel = 100
-//    let thirdLevel = 300
-//    let stickers = bonus / 10
-//    switch stickers {
-//    case 0...10:
-//        print("У вас первый уровень акции, у вас", stickers , "бонусов , вы можете забрать плюшевую игрушку")
-//        print("Для достижения второго уровня необходимо", secondLevel - stickers ,"бонусов")
-//    case 10...100:
-//        print("У вас второй уровень акции, у вас", stickers, " бонусов , вы можете забрать тортик")
-//        print("Для достижения третьего уровня необходимо", secondLevel - stickers ,"бонусов")
-//    case 100...300:
-//        print("У вас третий уровень акции, у вас", stickers, " бонусов , вы можете забрать кастрюлю")
-//        print("Для достижения четвертого уровня необходимо", thirdLevel - stickers ,"бонусов")
-//    case 300...999999:
-//        print("У вас максимальный уровень акции, вы можете забрать все призы")
-//    default:
-//        print("У вас 0 бонусов")
+//7.1
+//class sportsmen{
+//    var FIO:String
+//    var sportType:String
+//    var howmanyyears:Int
+//    
+//    init(FIO: String, sportType: String, howmanyyears: Int) {
+//        self.FIO = FIO
+//        self.sportType = sportType
+//        self.howmanyyears = howmanyyears
 //    }
 //}
-//calculateSticker()
 //
+//let sport = sportsmen(FIO: "Черкасов Вадим Андреевич", sportType: "Футбол", howmanyyears: 15)
+//print("Фио \(sport.FIO),занимается \(sport.sportType), на протяжении \(sport.howmanyyears) лет")
+//7.2
+//struct sportsmen{
+//    var FIO: String
+//    var sportType: String
+//    var howmanyyear: Int
+//    
+//    init(FIO: String, sportType: String, howmanyyear: Int) {
+//        self.FIO = FIO
+//        self.sportType = sportType
+//        self.howmanyyear = howmanyyear
+//    }
+//}
+//let sport = sportsmen(FIO: "Черкасов Вадим Андреевич", sportType: "Футбол", howmanyyear: 15)
+//print("Фио \(sport.FIO),занимается \(sport.sportType), на протяжении \(sport.howmanyyear) лет")
+//7.3
+//struct sportsmen{
+//    var FIO: String
+//    var sportType: String
+//    var howmanyyear: Int
+//
+//    init(FIO: String, sportType: String, howmanyyear: Int) {
+//        self.FIO = FIO
+//        self.sportType = sportType
+//        self.howmanyyear = howmanyyear
+//    }
+//}
+//let sport = sportsmen(FIO: "Черкасов Вадим Андреевич", sportType: "Футбол", howmanyyear: 6)
+//let secondsport = sportsmen(FIO: "Переверзев Даниил Дмитриевич", sportType: "Баскетбол", howmanyyear: 3)
+//let thirdsport = sportsmen(FIO: "Головатенко Никита Александрович", sportType: "Футбол", howmanyyear: 10)
+//let name = "Черкасов Вадим Андреевич"
+//var allsport = [sport , secondsport , thirdsport]
+//let filtersportsmen = allsport.filter{$0.FIO == name}
+//
+//if !filtersportsmen.isEmpty {
+//    print("Найденные спортсмены с именем '\(name)':")
+//    for sportsmen in filtersportsmen {
+//        print("Спортсмен: \(sportsmen.FIO), Вид спорта: \(sportsmen.sportType), Сколько лет в спорте: \(sportsmen.howmanyyear)")
+//    }
+//} else {
+//    print("Спортсмены с именем '\(name)' не найдены.")
+//}
